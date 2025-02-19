@@ -22,6 +22,11 @@ $(document).keypress(function() {
     //console.log(userChosenColour);
     userClickedPattern.push(userChosenColour);
    // console.log(userClickedPattern);
+   if(!started){
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+   }
     playSound(userChosenColour);
     animatePress(userChosenColour);
     checkAnswer(userClickedPattern.length - 1);
